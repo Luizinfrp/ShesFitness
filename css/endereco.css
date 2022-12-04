@@ -1,0 +1,119 @@
+:root {
+    --branco-principal: white;
+    --branco-secundario: rgb(150, 144, 144);
+    --rosa-botao: #FF00FF;
+    --preto-principal: #000000;
+}
+
+body {
+    background-image: url(../images/BackgroundEndereçoDesktop.png);
+    background-repeat: no-repeat;
+    background-color: var(--preto-principal);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+    align-items: center;
+}
+
+.cabecalho__lista {
+    display: flex;
+}
+
+.cabecalho__lista-item {
+    margin-right: 8em;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.cabecalho__lista-item__link {
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+
+.cabecalho__lista-item__link--ativo {
+    color: var(--branco-secundario);
+}
+
+.cabecalho__lista-item__link:hover {
+    text-decoration: underline;
+}
+
+.cabecalho__pesquisa {
+    width: 17%;
+    height: 2.8em;
+    border: 1px solid var(--branco-principal);
+    border-radius: 2em;
+    text-align: center;
+    background-image: url(../images/icons8-pesquisar.svg);
+    background-repeat: no-repeat;
+    background-position: 1.5em;
+    background-size: 24px;
+}
+
+.principal {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.principal__texto {
+    color: var(--branco-principal);
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    line-height: 2em;
+    margin: 1.5em 0;
+}
+
+.principal iframe {
+    width: 60%;
+}
+
+.principal__texto-secundario {
+    color: var(--branco-principal);
+    font-size: 36px;
+    margin-top: 1em;
+}
+
+.rodape {
+    margin-top: 2em;
+}
+
+.rodape__texto {
+    color: var(--branco-principal);
+    font-size: 18px;
+    text-align: center;
+}
+
+@media screen and (max-width: 812px) {
+    body {
+        background-image: url(../images/BackgroundEndereçoMobile.png);
+        background-repeat: no-repeat;
+        background-position: -5em;
+    }
+    
+    .cabecalho {
+        border-bottom: 1px solid var(--branco-principal);
+        padding-bottom: 16px;
+    }
+
+    .cabecalho__lista-item {
+        margin-right: 1em;
+    }
+
+    .cabecalho__lista-item__link {
+        font-size: 18px;
+    }
+
+    .cabecalho__pesquisa {
+        display: none;
+    }
+
+    .principal__texto {
+        font-size: 24px;
+    }
+}
